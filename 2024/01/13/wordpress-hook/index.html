@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wordpress plugin development - hook - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="Wordpress Plugin Development - HooksAs an experienced developer in Wordpress plugin development, I ,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Wordpress plugin development - hook</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/Backend"><b>「
+                    </b>BACKEND<b> 」</b></a>
+                
+                January 13, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/01/13/wordpress-hook/" title="Wordpress plugin development - hook" class="">Wordpress plugin development - hook</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    39k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    36 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Wordpress-Plugin/" rel="tag">Wordpress Plugin</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="Wordpress-Plugin-Development-Hooks"><a href="#Wordpress-Plugin-Development-Hooks" class="headerlink" title="Wordpress Plugin Development - Hooks"></a>Wordpress Plugin Development - Hooks</h1><p>As an experienced developer in Wordpress plugin development, I have a deep understanding of the power and flexibility offered by <strong>hooks</strong>. Hooks play a crucial role in extending the functionality of Wordpress and allow developers to modify or add code at specific points within the execution flow of the CMS.</p>
+<h2 id="What-are-Hooks"><a href="#What-are-Hooks" class="headerlink" title="What are Hooks?"></a>What are Hooks?</h2><p>In the context of Wordpress, hooks are <strong>actions</strong> and <strong>filters</strong> that enable developers to customize and modify the behavior of the CMS. They provide a way to insert custom code without directly modifying the core Wordpress files, ensuring compatibility and easier maintenance of the plugins.</p>
+<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><p>Actions are events triggered at specific points during the execution of Wordpress. They allow developers to execute their own code at these points and perform additional tasks. Common actions include <code>init</code>, <code>admin_init</code>, <code>wp_enqueue_scripts</code>, and many more. By attaching custom functions to these actions, developers can extend the functionality of Wordpress and add their own features seamlessly.</p>
+<h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><p>Filters, on the other hand, allow developers to modify the output or behavior of Wordpress functions. They provide a way to intercept and modify data before it is displayed or used by other parts of the CMS. Filters are widely used for tasks such as modifying post content, changing the appearance of widgets, or altering the behavior of queries. By attaching custom functions to filters, developers can customize the output or behavior of Wordpress to suit their specific needs.</p>
+<h2 id="Harnessing-the-Power-of-Hooks-in-Plugin-Development"><a href="#Harnessing-the-Power-of-Hooks-in-Plugin-Development" class="headerlink" title="Harnessing the Power of Hooks in Plugin Development"></a>Harnessing the Power of Hooks in Plugin Development</h2><p>Developing Wordpress plugins with hooks offers immense power and flexibility. By properly utilizing actions and filters, developers can seamlessly integrate their code into the Wordpress ecosystem and extend its functionality without modifying the core files.</p>
+<p>When developing a plugin, it’s essential to identify the appropriate hooks to use. This involves understanding the Wordpress API, its available actions and filters, and how they can be leveraged to achieve the desired functionality. By carefully selecting the right hooks and attaching custom functions to them, developers can ensure their plugin works harmoniously with Wordpress and other plugins, providing a seamless user experience.</p>
+<p>In addition to utilizing existing hooks, developers can also create custom hooks within their plugins, allowing other developers to extend or modify their plugin’s functionality easily. This promotes collaboration and enables the Wordpress community to build upon and enhance each other’s work.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Hooks are a fundamental aspect of Wordpress plugin development. With a solid understanding of actions and filters, developers can unlock the full potential of Wordpress and create powerful and extensible plugins. By leveraging hooks effectively, developers can customize and extend Wordpress to meet their specific requirements, ensuring a flexible and scalable solution.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*Plugin Name: First Plugin</span></span><br><span class="line"><span class="comment">*Description: Include Welcome bar, Shortcode Contact Form （custom post type）,  For loop Post Function</span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(!<span class="title function_ invoke__">defined</span>(<span class="string">&#x27;ABSPATH&#x27;</span>))&#123;</span><br><span class="line">    <span class="keyword">exit</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Start Welcome bar Function</span></span><br><span class="line"><span class="comment">//add_action(&#x27;wp_body_open&#x27;, &#x27;open_heading&#x27;);</span></span><br><span class="line"><span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;wp_footer&#x27;</span>, <span class="string">&#x27;open_heading&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//determin get user name or website name</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_user_or_websitename</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title function_ invoke__">is_user_logged_in</span>())&#123;</span><br><span class="line">    <span class="variable">$current_user</span> = <span class="title function_ invoke__">wp_get_current_user</span>();</span><br><span class="line">    <span class="comment">//what that mean of user_login?</span></span><br><span class="line">   	<span class="keyword">return</span> <span class="variable">$current_user</span> -&gt; user_login;</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="title function_ invoke__">get_option</span>(<span class="string">&#x27;bar_field&#x27;</span>))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="title function_ invoke__">get_option</span>(<span class="string">&#x27;bar_field&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             <span class="variable">$bloginfo</span> = <span class="title function_ invoke__">get_bloginfo</span>(<span class="string">&#x27;name&#x27;</span>);</span><br><span class="line">             <span class="keyword">return</span> <span class="variable">$bloginfo</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//output wording</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">open_heading</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;&lt;h3 class=&quot;open_heading&quot;&gt; HI, &#x27;</span>.<span class="title function_ invoke__">get_user_or_websitename</span>().<span class="string">&#x27;.&lt;/h3&gt; &#x27;</span>;</span><br><span class="line">  	<span class="keyword">echo</span> <span class="string">&#x27;&lt;h3 class=&quot;open_heading&quot;&gt; Any question, please email to &#x27;</span>.<span class="title function_ invoke__">get_bloginfo</span>(<span class="string">&#x27;admin_email&#x27;</span>).<span class="string">&#x27;.&lt;/h3&gt; &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//add CSS</span></span><br><span class="line"><span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;wp_print_styles&#x27;</span>,<span class="string">&#x27;open_heading_css&#x27;</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">open_heading_css</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span><span class="string">&#x27;</span></span><br><span class="line"><span class="string">  	&lt;style&gt;</span></span><br><span class="line"><span class="string">  h3.open_heading&#123;</span></span><br><span class="line"><span class="string">  color:red;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">  	&lt;/style&gt;</span></span><br><span class="line"><span class="string">  &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Add menu in a admin page</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar_plugin_page</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$page_title</span> =<span class="string">&quot;Bar Options&quot;</span>;</span><br><span class="line">    <span class="variable">$menu_title</span> = <span class="string">&quot;1st Bar Options&quot;</span>;</span><br><span class="line">    <span class="variable">$capatibily</span> = <span class="string">&quot;manage_options&quot;</span>;</span><br><span class="line">    <span class="variable">$slug</span> = <span class="string">&quot;bar-plugin&quot;</span>;</span><br><span class="line">    <span class="variable">$callback</span> = <span class="string">&quot;bar_page_html&quot;</span>;</span><br><span class="line">    <span class="comment">//$icon = &quot;dashicons-schedule&quot;;</span></span><br><span class="line">    <span class="variable">$icon</span> = <span class="string">&quot;dashicons-editor-kitchensink&quot;</span>;</span><br><span class="line">    <span class="variable">$position</span> = <span class="number">60</span>;</span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">add_menu_page</span>(<span class="variable">$page_title</span>, <span class="variable">$menu_title</span>, <span class="variable">$capatibily</span>, <span class="variable">$slug</span>, <span class="variable">$callback</span>, <span class="variable">$icon</span>, <span class="variable">$position</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar_page_html</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span> =&quot;<span class="title">wrap</span> <span class="title">top</span>-<span class="title">bar</span>-<span class="title">wrapper</span>&quot;&gt;</span></span><br><span class="line"><span class="class">    &lt;<span class="title">form</span> <span class="title">method</span>=&quot;<span class="title">post</span>&quot; <span class="title">action</span>=&quot;<span class="title">options</span>.<span class="title">php</span>&quot;&gt;</span></span><br><span class="line"><span class="class">        &lt;?<span class="title">php</span> <span class="title">settings_errors</span>()?&gt;</span></span><br><span class="line"><span class="class">        &lt;?<span class="title">php</span> <span class="title">settings_fields</span>(&#x27;<span class="title">bar_option_group</span>&#x27;);?&gt;</span></span><br><span class="line"><span class="class">        &lt;<span class="title">label</span> <span class="title">for</span>=&quot;<span class="title">bar_field_first</span>&quot;&gt;<span class="title">Please</span> <span class="title">input</span> <span class="title">value</span>&lt;/<span class="title">label</span>&gt;&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="class">        &lt;<span class="title">input</span> <span class="title">name</span>=&#x27;<span class="title">bar_field</span>&#x27; <span class="title">type</span>=&quot;<span class="title">text</span>&quot; <span class="title">id</span>=&quot;<span class="title">bar_field_first</span>&quot; <span class="title">value</span>=&quot; &lt;?<span class="title">php</span> <span class="title">echo</span> <span class="title">get_option</span>(&#x27;<span class="title">bar_field</span>&#x27;); ?&gt; &quot;&gt;</span></span><br><span class="line"><span class="class">        &lt;?<span class="title">php</span> <span class="title">submit_button</span>(); ?&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">        &lt;<span class="title">hr</span>&gt;</span></span><br><span class="line"><span class="class">        </span></span><br><span class="line"><span class="class">        </span></span><br><span class="line"><span class="class">    &lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"><span class="class">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">&lt;?<span class="title">php</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">&#125;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">add_action</span>(&#x27;<span class="title">admin_menu</span>&#x27;, &#x27;<span class="title">bar_plugin_page</span>&#x27;);</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//<span class="title">Register</span>, <span class="title">bar_option_group</span> <span class="title">is</span> <span class="title">not</span> <span class="title">an</span> <span class="title">official</span> <span class="title">api</span></span></span><br><span class="line"><span class="class"><span class="title">function</span> <span class="title">bar_register_settings</span>()</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">register_setting</span>(<span class="string">&#x27;bar_option_group&#x27;</span>, <span class="string">&#x27;bar_field&#x27;</span>, <span class="keyword">array</span>(<span class="string">&#x27;sanitize_callback&#x27;</span> =&gt; <span class="string">&#x27;sanitize_text_field&#x27;</span>, <span class="string">&#x27;default&#x27;</span> =&gt; <span class="string">&#x27;0&#x27;</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;admin_init&#x27;</span>, <span class="string">&#x27;bar_register_settings&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//&lt;!------------------------------------------------------------&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//Start Custom Post type</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SimpleContactForm</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">         <span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;init&#x27;</span>,<span class="keyword">array</span>(<span class="variable">$this</span>, <span class="string">&#x27;create_custom_post_type&#x27;</span>));</span><br><span class="line">         <span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;wp_enqueue_scripts&#x27;</span>, <span class="keyword">array</span>(<span class="variable">$this</span>, <span class="string">&#x27;load_assets&#x27;</span>));</span><br><span class="line">         <span class="title function_ invoke__">add_shortcode</span>(<span class="string">&#x27;1st-contact-us-form&#x27;</span>, <span class="keyword">array</span>(<span class="variable">$this</span>, <span class="string">&#x27;load_shortcode&#x27;</span>));</span><br><span class="line">         <span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;wp_footer&#x27;</span>, <span class="keyword">array</span>(<span class="variable">$this</span>, <span class="string">&#x27;load_scripts&#x27;</span>));</span><br><span class="line">         <span class="comment">//Register REST API</span></span><br><span class="line">         <span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;rest_api_init&#x27;</span>, <span class="keyword">array</span>(<span class="variable">$this</span>, <span class="string">&#x27;register_rest-api&#x27;</span>));</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">create_custom_post_type</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="variable">$custom_post_type</span> = <span class="keyword">array</span>(</span><br><span class="line">            <span class="string">&#x27;public&#x27;</span> =&gt; <span class="literal">true</span>,</span><br><span class="line">            <span class="string">&#x27;has_archive&#x27;</span> =&gt; <span class="literal">true</span>,</span><br><span class="line">            <span class="string">&#x27;supports&#x27;</span> =&gt; <span class="keyword">array</span>(<span class="string">&#x27;title&#x27;</span>),</span><br><span class="line">            <span class="string">&#x27;exclude_from_search&#x27;</span> =&gt; <span class="literal">true</span>,</span><br><span class="line">            <span class="string">&#x27;publicly_queryable&#x27;</span> =&gt; <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&#x27;capability&#x27;</span> =&gt; <span class="string">&#x27;manage_options&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;labels&#x27;</span> =&gt; <span class="keyword">array</span>(<span class="string">&#x27;name&#x27;</span> =&gt; <span class="string">&#x27;1st Contact Form&#x27;</span>, <span class="string">&#x27;singular_name&#x27;</span> =&gt; <span class="string">&#x27;Contact Form Entry&#x27;</span>), </span><br><span class="line">            <span class="string">&#x27;menu_icon&#x27;</span> =&gt; <span class="string">&#x27;dashicons-list-view&#x27;</span>,</span><br><span class="line"></span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">register_post_type</span>(<span class="string">&#x27;simple_contact_form&#x27;</span>, <span class="variable">$custom_post_type</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">load_assets</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="title function_ invoke__">wp_enqueue_style</span>(<span class="string">&#x27;simple-contact-form&#x27;</span>, <span class="title function_ invoke__">plugin_dir_url</span>(<span class="keyword">__FILE__</span>),<span class="string">&#x27;css/simple-contact-form.css&#x27;</span>, <span class="keyword">array</span>(), <span class="number">1</span>, <span class="string">&#x27;all&#x27;</span>);</span><br><span class="line">        <span class="title function_ invoke__">wp_enqueue_style</span>(<span class="string">&#x27;simple-contact-form&#x27;</span>, <span class="title function_ invoke__">plugin_dir_url</span>(<span class="keyword">__FILE__</span>),<span class="string">&#x27;css/simple-contact-form.js&#x27;</span>, <span class="keyword">array</span>(<span class="string">&#x27;jquery&#x27;</span>), <span class="number">1</span>, <span class="literal">true</span>);</span><br><span class="line">        <span class="comment">//wp_enqueue_style(&#x27;university_main_styles&#x27;, get-stylesheet_uri());</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">load_shortcode</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//echo cant be used</span></span><br><span class="line">        <span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">        &lt;h2&gt;Send us an email&lt;/h2&gt;</span><br><span class="line">        &lt;p&gt;Fill in below Form&lt;/p&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">        &lt;form id=<span class="string">&quot;simple-contact-form_form&quot;</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span>=&#x27;<span class="title">form</span>-<span class="title">group</span> <span class="title">mb2</span>&#x27;&gt;</span></span><br><span class="line"><span class="class">            &lt;<span class="title">input</span> <span class="title">name</span>=&quot;<span class="title">name</span>&quot; <span class="title">type</span>=&quot;<span class="title">text</span>&quot; <span class="title">placeholder</span>=&quot;<span class="title">Name</span>&quot;&gt;&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class">             &lt;<span class="title">div</span> <span class="title">class</span>=&#x27;<span class="title">form</span>-<span class="title">group</span> <span class="title">mb2</span>&#x27;&gt;</span></span><br><span class="line"><span class="class">            &lt;<span class="title">input</span> <span class="title">name</span>=&#x27;<span class="title">email</span>&#x27; <span class="title">type</span>=&#x27;<span class="title">email</span>&#x27; <span class="title">placeholder</span>=&#x27;<span class="title">email</span>&#x27;&gt;&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class">             &lt;<span class="title">div</span> <span class="title">class</span>=&#x27;<span class="title">form</span>-<span class="title">group</span> <span class="title">mb2</span>&#x27;&gt;</span></span><br><span class="line"><span class="class">            &lt;<span class="title">input</span> <span class="title">name</span>=&#x27;<span class="title">phone</span>&#x27; <span class="title">type</span>=&#x27;<span class="title">tel</span>&#x27; <span class="title">placeholder</span>=&#x27;<span class="title">tel</span>&#x27;&gt;&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class">             &lt;<span class="title">div</span> <span class="title">class</span>=&#x27;<span class="title">form</span>-<span class="title">group</span> <span class="title">mb2</span>&#x27;&gt;</span></span><br><span class="line"><span class="class">            &lt;<span class="title">textarea</span> <span class="title">name</span>=&#x27;<span class="title">message</span>&#x27; <span class="title">type</span>=&#x27;<span class="title">text</span>&#x27; <span class="title">placeholder</span>=&#x27;<span class="title">message</span>&#x27;&gt;&lt;/<span class="title">textarea</span>&gt;&lt;<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class">            &lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="class">            &lt;<span class="title">button</span> <span class="title">type</span>=&#x27;<span class="title">submit</span>&#x27; <span class="title">class</span>=&quot;<span class="title">btn</span> <span class="title">btn</span>-<span class="title">success</span> <span class="title">btn</span>-<span class="title">block</span>&quot;&gt;<span class="title">Send</span> <span class="title">Message</span>&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="class">        &lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"><span class="class">        &lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class">        &lt;?<span class="title">php</span></span></span><br><span class="line"><span class="class">  </span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">function</span> <span class="title">load_scripts</span>()</span>&#123;</span><br><span class="line">    <span class="meta">?&gt;</span></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> nonce = <span class="string">&#x27;&lt;?php echo wp_create_nonce(&#x27;</span>wp_rest<span class="string">&#x27;); ?&gt;&#x27;</span></span><br><span class="line">        (<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">             $(<span class="string">&#x27;#simple-contact-form_form&#x27;</span>).<span class="title function_ invoke__">submit</span>(function(event)&#123;</span><br><span class="line">            <span class="comment">//prevent to jump to other page</span></span><br><span class="line">            event.<span class="title function_ invoke__">preventDefault</span>();</span><br><span class="line">            <span class="keyword">var</span> form =<span class="title function_ invoke__">jQuery</span>(this).<span class="title function_ invoke__">serialize</span>();</span><br><span class="line">            console.<span class="title function_ invoke__">log</span>(form);</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">            jQuery.<span class="title function_ invoke__">ajax</span>(&#123;</span><br><span class="line"></span><br><span class="line">                <span class="attr">method</span>:<span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">                <span class="attr">url</span>:<span class="string">&#x27;&lt;?php echo get_rest_url(null, &#x27;</span>simple-contact-form/v1/send-email<span class="string">&#x27;);  ?&gt;&#x27;</span>,</span><br><span class="line">                <span class="attr">header</span>: &#123;<span class="string">&#x27;X-WP-Nonce&#x27;</span>: nonce &#125;, </span><br><span class="line">                <span class="attr">data</span>: form</span><br><span class="line"></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;);</span><br><span class="line">        &#125;)(jQuery)</span><br><span class="line">       </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    <span class="meta">&lt;?php</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//test.com/wp-json/simple-contact-form/v1/send-email</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">register_rest_api</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="title function_ invoke__">register_rest_route</span>(<span class="string">&#x27;simple-contact-form/v1&#x27;</span>, <span class="string">&#x27;send-email&#x27;</span>, <span class="keyword">array</span>(</span><br><span class="line">            <span class="string">&#x27;method&#x27;</span> =&gt; <span class="string">&#x27;POST&#x27;</span>, </span><br><span class="line">            <span class="string">&#x27;callback&#x27;</span> =&gt; <span class="keyword">array</span>(<span class="variable">$this</span>, <span class="string">&#x27;handle_contact_form&#x27;</span>)</span><br><span class="line">        ));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">handle_contact_form</span>(<span class="params"><span class="variable">$data</span></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">[Title](http:<span class="comment">//localhost:4000/tags/phpMyAdmin/)</span></span><br><span class="line"><span class="keyword">if</span> (<span class="title function_ invoke__">class_exists</span>(<span class="string">&#x27;SimpleContactForm&#x27;</span>))&#123;</span><br><span class="line">    <span class="variable">$SimpleContactForm</span> = <span class="keyword">new</span> <span class="title class_">SimpleContactForm</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//&lt;!------------------------------------------------------------&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//Start For loop Post</span></span><br><span class="line"><span class="title function_ invoke__">add_action</span>(<span class="string">&#x27;wp_footer&#x27;</span>, <span class="string">&#x27;forLoopPost&#x27;</span>);</span><br><span class="line">Function <span class="title function_ invoke__">forLoopPost</span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="title function_ invoke__">have_posts</span>())&#123;</span><br><span class="line">        <span class="title function_ invoke__">the_post</span>();</span><br><span class="line"></span><br><span class="line">        <span class="meta">?&gt;</span> &lt;h4&gt;&lt;a href=<span class="string">&#x27;&lt;?php the_permalink();  ?&gt;&#x27;</span>&gt;<span class="meta">&lt;?php</span> <span class="title function_ invoke__">the_title</span>(); <span class="meta">?&gt;</span>&lt;/a&gt;&lt;/h4&gt;&lt;br&gt;</span><br><span class="line"></span><br><span class="line">        &lt;h5&gt; <span class="meta">&lt;?php</span> <span class="title function_ invoke__">the_content</span>(); <span class="meta">?&gt;</span>&lt;/h5&gt; &lt;hr&gt;<span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://s2.ax1x.com/2019/09/19/nLtSiD.png" height=300 width=300></img>
+                    <p>John Doe</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">6 <p>Articles</p></a></li>
+                    <li><a href="/categories">6 <p>Categories</p></a></li>
+                    <li><a href="/tags">13 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Wordpress-Plugin-Development-Hooks"><span class="toc-number">1.</span> <span class="toc-text">Wordpress Plugin Development - Hooks</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-are-Hooks"><span class="toc-number">1.1.</span> <span class="toc-text">What are Hooks?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Actions"><span class="toc-number">1.1.1.</span> <span class="toc-text">Actions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filters"><span class="toc-number">1.1.2.</span> <span class="toc-text">Filters</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Harnessing-the-Power-of-Hooks-in-Plugin-Development"><span class="toc-number">1.2.</span> <span class="toc-text">Harnessing the Power of Hooks in Plugin Development</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">1.3.</span> <span class="toc-text">Conclusion</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            John Doe
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        </br>
+        
+        <span class="gradient-text">
+            <a href="https://beian.miit.gov.cn/" title="beian.miit.gov.cn" target="_blank" rel="noopener">beian.miit.gov.cn</a>
+        </span>
+        
+        
+        </br>
+        <span style="display: inline-block;"> <img src=/null></span>
+        
+        <span class="gradient-text">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602009049" title="www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049" target="_blank" rel="noopener">www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049</a>
+        </span>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
