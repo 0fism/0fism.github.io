@@ -1,0 +1,120 @@
+---
+title: ChatRoom
+date: # 2019-07-14 18:38:45
+categories:
+ - Backend
+ - Datebase
+tags:
+- Django
+- Python
+- SQLite
+---
+
+
+### models.py
+```python
+import profile
+from xmlrpc.client import Boolean
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    pic = models.ImageField(upload_to="img", blank=True, null=True)
+    friends = models.ManyToManyField('Friend', related_name = "my_friends")
+    
+    def __str__(self):
+        return self.name
+    
+    
+class Friend(models.Model):
+    profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.profile.name
+
+class ChatMessage(models.Model):
+    body = models.TextField()
+    msg_sender = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="msg_sender")
+    msg_receiver = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="msg_receiver")
+    seen = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return self.body
+ ```   
+
+
+### views.py
+
+```python
+from cgi import print_arguments
+from django.shortcuts import render, redirect
+from .models import ChatMessage, Profile, Friend
+from .forms import ChatMessageForm
+from django.http import JsonResponse
+import json
+
+# Create your views here.
+def index(request):
+    user = request.user.profile
+    friends = user.friends.all()
+    context = {"user": user, "friends": friends}
+    return render(request, "mychatapp/index.html", context)
+
+
+def detail(request,pk):
+    friend = Friend.objects.get(profile_id=pk)
+    user = request.user.profile
+    profile = Profile.objects.get(id=friend.profile.id)
+    chats = ChatMessage.objects.all()
+    rec_chats = ChatMessage.objects.filter(msg_sender=profile, msg_receiver=user, seen=False)
+    rec_chats.update(seen=True)
+    form = ChatMessageForm()
+    if request.method == "POST":
+        form = ChatMessageForm(request.POST)
+        if form.is_valid():
+            chat_message = form.save(commit=False)
+            chat_message.msg_sender = user
+            chat_message.msg_receiver = profile
+            chat_message.save()
+            return redirect("detail", pk=friend.profile.id)
+    context = {"friend": friend, "form": form, "user":user, 
+               "profile":profile, "chats": chats, "num": rec_chats.count()}
+    return render(request, "mychatapp/detail.html", context)
+
+def sentMessages(request, pk):
+    user = request.user.profile
+    friend = Friend.objects.get(profile_id=pk)
+    profile = Profile.objects.get(id=friend.profile.id)
+    data = json.loads(request.body)
+    new_chat = data["msg"]
+    new_chat_message = ChatMessage.objects.create(body=new_chat, msg_sender=user, msg_receiver=profile, seen=False )
+    print(new_chat)
+    return JsonResponse(new_chat_message.body, safe=False)
+
+def receivedMessages(request, pk):
+    user = request.user.profile
+    friend = Friend.objects.get(profile_id=pk)
+    profile = Profile.objects.get(id=friend.profile.id)
+    arr = []
+    chats = ChatMessage.objects.filter(msg_sender=profile, msg_receiver=user)
+    for chat in chats:
+        arr.append(chat.body)
+    return JsonResponse(arr, safe=False)
+
+
+def chatNotification(request):
+    user = request.user.profile
+    friends = user.friends.all()
+    arr = []
+    for friend in friends:
+        chats = ChatMessage.objects.filter(msg_sender__id=friend.profile.id, msg_receiver=user, seen=False)
+        arr.append(chats.count())
+    return JsonResponse(arr, safe=False)
+    
+
+
+```

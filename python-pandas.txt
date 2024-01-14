@@ -1,0 +1,27 @@
+---
+title: n8n 
+date: # 2019-07-14 18:38:45
+categories:
+ - Backend
+ - CI/CD 
+tags:
+- Javascript
+- n8n
+- GPT api
+- Notion api
+---
+
+## Building Automated Workflows with n8n and JavaScript for CICD
+
+As a highly skilled programmer and automation enthusiast, I take pride in developing **efficient and streamlined workflows**. One of my notable achievements includes creating a powerful automation workflow using **n8n**, a popular open-source automation tool. In this project, I leveraged my expertise in **JavaScript** to orchestrate a seamless integration between different services.
+
+Firstly, I designed a workflow that involved fetching **RSS data** in JSON format using n8n's built-in functionalities. To achieve this, I utilized the powerful capabilities of n8n's **HTTP Request node** and integrated it with **GPT**, an advanced language model. By sending a prompt request, I was able to extract relevant information from the RSS feed and process it using GPT's natural language processing capabilities.
+
+Next, I integrated the workflow with **Notion**, a versatile productivity tool that offers an **API** for seamless data integration. Using n8n's Notion nodes and the Notion API, I designed a connection that allowed me to insert the retrieved data into a Notion table with ease. This integration enabled the automatic updating of the table whenever new data was fetched, ensuring real-time information availability.
+
+To further enhance the automation capabilities, I implemented a custom **Notion interface** that acted as a trigger for another GPT prompt action whenever required. By designing a user-friendly interface within Notion, I enabled users to initiate GPT prompt requests directly from the platform, making the automation workflow more interactive and versatile.
+
+Throughout this project, I demonstrated my proficiency in **JavaScript coding**, leveraging n8n's extensive node ecosystem and integrating it seamlessly with external APIs. The resulting automation workflow not only simplified data retrieval and processing but also enhanced productivity by eliminating manual tasks and enabling real-time data updates. This project serves as a testament to my ability to design and implement efficient CICD pipelines and showcases my dedication to delivering innovative automation solutions.
+
+![Uber table](/img/n8n-rss-gpt-notion.png "MarineGEO logo")
+![Uber table](/img/control-gpt-update-notion.png "MarineGEO logo")

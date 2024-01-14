@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Advance SQL challenge by using using phpMyAdmin and Query Statement - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    
+    <meta name="description" content="AbstractAs a passionate technical marketer with expertise in database management, I took on the exc,"> 
+    <meta name="author" content="Raymond Chan"> 
+    
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    <link rel="stylesheet" href="/css/animate.min.css">
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    <link rel="stylesheet" href="/css/codemirror.min.css">
+    <link rel="stylesheet" href="/css/dracula.css">
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="index.html" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Advance SQL challenge by using using phpMyAdmin and Query Statement</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/Database"><b>「
+                    </b>DATABASE<b> 」</b></a>
+                
+                January 14, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/01/14/driver-sql/" title="Advance SQL challenge by using using phpMyAdmin and Query Statement" class="">Advance SQL challenge by using using phpMyAdmin and Query Statement</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    33k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    30 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Data-Analysis/" rel="tag">Data Analysis</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/SQL-Statement/" rel="tag">SQL Statement</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/phpMyAdmin/" rel="tag">phpMyAdmin</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>As a passionate technical marketer with expertise in <strong>database management</strong>, I took on the exciting challenge of building a <strong>SQL practics</strong>. Leveraging the power of <strong>phpMyAdmin</strong> and my proficiency in <code>advanced SQL syntax</code>, I successfully developed a robust solution that provided insightful answers to a set of predefined questions. This project showcases my dedication to delivering effective solutions (these statements can be run properly) in the realm of data analysis and database management.</p>
+<p>The SQL Q&amp;A system was designed to extract valuable information from a given dataset. One of the main objectives was to provide comprehensive insights about completed trips, driver cancellations, gross bookings, active drivers, average trip distance, and new drivers. To achieve this, I formulated a complex query that aggregated the necessary data. The result was a concise and informative overview of the key metrics for the specified timeframe.</p>
+<h1 id="Importance"><a href="#Importance" class="headerlink" title="Importance"></a>Importance</h1><p>Learning SQL is essential for <code>technical marketers</code> in the field of <strong>website SEO</strong>. SQL skills enable marketers to extract, analyze, and manipulate large datasets efficiently, providing valuable insights for optimizing SEO strategies. By querying and analyzing website data, marketers can make data-driven decisions, improve user experience, and drive targeted traffic. SQL also empowers marketers to create custom reports tailored to their needs, integrating data from multiple sources to gain a holistic view of their marketing efforts. Furthermore, SQL proficiency facilitates collaboration with data teams, enhancing the effectiveness of marketing campaigns.</p>
+<h1 id="Dump-Data"><a href="#Dump-Data" class="headerlink" title="Dump Data"></a>Dump Data</h1><p><img src="/img/driver-table.png" alt="Uber table" title="MarineGEO logo"><br><img src="/img/sql-driver-simulation-table.png" alt="Uber table" title="MarineGEO logo"></p>
+<h1 id="Dump-Question"><a href="#Dump-Question" class="headerlink" title="Dump Question"></a>Dump Question</h1><h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><ul>
+<li>Write a query to show WEEKLY number of completed trips, number of driver canceled trips, total gross booking (i.e. rider fare), number of active drivers (i.e. completed at least one trip), average trip distance, number of new drivers.</li>
+</ul>
+<h2 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h2><ul>
+<li>Write a query to show the total completed trips in the past 7 days and group by 18-district. (You will need to use the table: uber.geofence)</li>
+</ul>
+<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h2><ul>
+<li>On top of Q2, write a query to show the trip percentage by each district.</li>
+</ul>
+<h2 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h2><ul>
+<li>Write a query to show all individual driver’s profile: driver_id, age, app rating, past 3 months earnings per supply hour and past 2 weeks acceptance rate (i.e. accepts &#x2F; dispatches).</li>
+</ul>
+<h1 id="Driver-or-travelling-database-Response"><a href="#Driver-or-travelling-database-Response" class="headerlink" title="Driver or travelling database Response"></a>Driver or travelling database Response</h1><h2 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer 1"></a>Answer 1</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    weeks.Weekly,</span><br><span class="line">    c1.CompletedTrip,</span><br><span class="line">    c2.CanceledTrip,</span><br><span class="line">    c3.GrossBooking,</span><br><span class="line">    c4.ActiveDriver,</span><br><span class="line">    c5.AvgDistance,</span><br><span class="line">    c6.NewDriver</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="keyword">DISTINCT</span> WEEK(request_timestamp) <span class="keyword">AS</span> Weekly</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">UNION</span></span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="keyword">DISTINCT</span> WEEK(first_trip_date) <span class="keyword">AS</span> Weekly</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            driver</span><br><span class="line">    ) <span class="keyword">AS</span> weeks</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> CompletedTrip,</span><br><span class="line">            WEEK(request_timestamp) <span class="keyword">AS</span> <span class="keyword">Period</span></span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            trip_status <span class="operator">=</span> <span class="string">&#x27;completed&#x27;</span></span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            <span class="keyword">Period</span></span><br><span class="line">    ) <span class="keyword">AS</span> c1 <span class="keyword">ON</span> weeks.Weekly <span class="operator">=</span> c1.Period</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> CanceledTrip,</span><br><span class="line">            WEEK(request_timestamp) <span class="keyword">AS</span> <span class="keyword">Period</span></span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            trip_status <span class="operator">=</span> <span class="string">&#x27;driver_canceled&#x27;</span></span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            <span class="keyword">Period</span></span><br><span class="line">    ) <span class="keyword">AS</span> c2 <span class="keyword">ON</span> weeks.Weekly <span class="operator">=</span> c2.Period</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            ROUND(<span class="built_in">SUM</span>(rider_fare), <span class="number">1</span>) <span class="keyword">As</span> GrossBooking,</span><br><span class="line">            WEEK(request_timestamp) <span class="keyword">AS</span> <span class="keyword">Period</span></span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            <span class="keyword">Period</span></span><br><span class="line">    ) <span class="keyword">AS</span> c3 <span class="keyword">ON</span> weeks.Weekly <span class="operator">=</span> c3.Period</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> ActiveDriver,</span><br><span class="line">            WEEK(first_trip_date) <span class="keyword">AS</span> TripPeriod</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            driver</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            first_trip_date <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line">            <span class="keyword">AND</span> is_rejected <span class="keyword">IS</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            TripPeriod</span><br><span class="line">    ) <span class="keyword">AS</span> c4 <span class="keyword">ON</span> weeks.Weekly <span class="operator">=</span> c4.TripPeriod</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            ROUND(<span class="built_in">AVG</span>(trip_distance), <span class="number">1</span>) <span class="keyword">AS</span> AvgDistance,</span><br><span class="line">            WEEK(request_timestamp) <span class="keyword">AS</span> <span class="keyword">Period</span></span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            trip_distance <span class="operator">&gt;</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            <span class="keyword">PERIOD</span></span><br><span class="line">    ) <span class="keyword">AS</span> c5 <span class="keyword">ON</span> weeks.Weekly <span class="operator">=</span> c5.Period</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> NewDriver,</span><br><span class="line">            WEEK(first_trip_date) <span class="keyword">AS</span> TripPeriod</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            driver</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            first_trip_date <span class="keyword">IS</span> <span class="keyword">NULL</span></span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            TripPeriod</span><br><span class="line">    ) <span class="keyword">AS</span> c6 <span class="keyword">ON</span> weeks.Weekly <span class="operator">=</span> c6.TripPeriod</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Answer-2"><a href="#Answer-2" class="headerlink" title="Answer 2"></a>Answer 2</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span></span><br><span class="line">    trips</span><br><span class="line"><span class="keyword">ADD</span></span><br><span class="line">    temp_location <span class="type">VARCHAR</span>(<span class="number">20</span>);</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="keyword">UPDATE</span></span><br><span class="line">    `trips`</span><br><span class="line"><span class="keyword">SET</span></span><br><span class="line">    `temp_location` <span class="operator">=</span> <span class="string">&#x27;Kowloon&#x27;</span></span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    `trips`.`trip_id` <span class="operator">=</span> <span class="string">&#x27;ub-iep-1&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    geo.locations,</span><br><span class="line">    c1.CompletedOrder</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="keyword">DISTINCT</span> district <span class="keyword">AS</span> locations</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            geofence</span><br><span class="line">    ) <span class="keyword">AS</span> geo</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="built_in">COUNT</span>(temp_location) <span class="keyword">AS</span> CompletedOrder,</span><br><span class="line">            temp_location <span class="keyword">AS</span> Region</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            trip_status <span class="operator">=</span> <span class="string">&#x27;completed&#x27;</span></span><br><span class="line">            <span class="keyword">AND</span> request_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">7</span> <span class="keyword">DAY</span>)</span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            temp_location</span><br><span class="line">    ) <span class="keyword">AS</span> c1 <span class="keyword">ON</span> geo.locations <span class="operator">=</span> c1.Region;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Answer-3"><a href="#Answer-3" class="headerlink" title="Answer 3"></a>Answer 3</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    geo.locations,</span><br><span class="line">    c1.CompletedOrder,</span><br><span class="line">    ROUND(</span><br><span class="line">        c1.CompletedOrder <span class="operator">/</span>(</span><br><span class="line">            <span class="keyword">SELECT</span></span><br><span class="line">                <span class="built_in">COUNT</span>(<span class="operator">*</span>)</span><br><span class="line">            <span class="keyword">FROM</span></span><br><span class="line">                trips</span><br><span class="line">        ) <span class="operator">*</span> <span class="number">100</span>,</span><br><span class="line">        <span class="number">0</span></span><br><span class="line">    ) <span class="keyword">AS</span> percentage</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="keyword">DISTINCT</span> district <span class="keyword">AS</span> locations</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            geofence</span><br><span class="line">    ) <span class="keyword">AS</span> geo</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            <span class="built_in">COUNT</span>(temp_location) <span class="keyword">AS</span> CompletedOrder,</span><br><span class="line">            temp_location <span class="keyword">AS</span> Region</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            trip_status <span class="operator">=</span> <span class="string">&#x27;completed&#x27;</span></span><br><span class="line">            <span class="keyword">AND</span> request_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">7</span> <span class="keyword">DAY</span>)</span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">            temp_location</span><br><span class="line">    ) <span class="keyword">AS</span> c1 <span class="keyword">ON</span> geo.locations <span class="operator">=</span> c1.Region;</span><br><span class="line"></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span></span><br><span class="line">    trips <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> temp_location;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Answer-4"><a href="#Answer-4" class="headerlink" title="Answer 4"></a>Answer 4</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    driver.driver_id <span class="keyword">AS</span> DriverId,</span><br><span class="line">    <span class="built_in">FLOOR</span>(</span><br><span class="line">        DATEDIFF(</span><br><span class="line">            CURDATE(),</span><br><span class="line">            STR_TO_DATE(driver.date_of_birth, <span class="string">&#x27;%Y-%m-%d&#x27;</span>)</span><br><span class="line">        ) <span class="operator">/</span> <span class="number">365</span></span><br><span class="line">    ) <span class="keyword">AS</span> Age,</span><br><span class="line">    driver.app_rating <span class="keyword">AS</span> AppRating,</span><br><span class="line">    c1.hours <span class="operator">/</span> c2.Earnings <span class="operator">*</span> <span class="number">100</span> <span class="keyword">AS</span> GainMoney,</span><br><span class="line">    c3.Accept <span class="operator">/</span> c5.Total <span class="operator">*</span> <span class="number">100</span> <span class="keyword">AS</span> AcceptRate,</span><br><span class="line">    c4.Dispatch <span class="operator">/</span> c5.Total <span class="operator">*</span> <span class="number">100</span> <span class="keyword">AS</span> DispatchRate</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    driver</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            driver_id,</span><br><span class="line">            (</span><br><span class="line">                TIMESTAMPDIFF(<span class="keyword">MINUTE</span>, start_timestamp, end_timestamp) <span class="operator">/</span> <span class="number">60</span></span><br><span class="line">            ) <span class="keyword">AS</span> hours</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            driver_supply</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            status <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="string">&#x27;offline&#x27;</span>)</span><br><span class="line">            <span class="keyword">AND</span> start_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">3</span> <span class="keyword">MONTH</span>)</span><br><span class="line">    ) <span class="keyword">AS</span> c1 <span class="keyword">ON</span> driver.driver_id <span class="operator">=</span> c1.driver_id</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            driver_id,</span><br><span class="line">            <span class="built_in">SUM</span>(driver_earnings) <span class="keyword">AS</span> Earnings</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            trips</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            request_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">3</span> <span class="keyword">MONTH</span>)</span><br><span class="line">    ) <span class="keyword">AS</span> c2 <span class="keyword">ON</span> driver.driver_id <span class="operator">=</span> c2.driver_id</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            driver_id,</span><br><span class="line">            <span class="built_in">SUM</span>(accepts) <span class="keyword">AS</span> Accept</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            driver_supply</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            start_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">2</span> WEEK)</span><br><span class="line">    ) <span class="keyword">AS</span> c3 <span class="keyword">ON</span> driver.driver_id <span class="operator">=</span> c3.driver_id</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            driver_id,</span><br><span class="line">            <span class="built_in">SUM</span>(dispatches) <span class="keyword">AS</span> Dispatch</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            driver_supply</span><br><span class="line">        <span class="keyword">WHERE</span></span><br><span class="line">            start_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">2</span> WEEK)</span><br><span class="line">    ) <span class="keyword">AS</span> c4 <span class="keyword">ON</span> driver.driver_id <span class="operator">=</span> c4.driver_id</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (</span><br><span class="line">        <span class="keyword">SELECT</span></span><br><span class="line">            driver_id,</span><br><span class="line">            (</span><br><span class="line">                (</span><br><span class="line">                    <span class="keyword">SELECT</span></span><br><span class="line">                        <span class="built_in">SUM</span>(accepts)</span><br><span class="line">                    <span class="keyword">FROM</span></span><br><span class="line">                        driver_supply</span><br><span class="line">                    <span class="keyword">WHERE</span></span><br><span class="line">                        start_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">2</span> WEEK)</span><br><span class="line">                ) <span class="operator">+</span> (</span><br><span class="line">                    <span class="keyword">SELECT</span></span><br><span class="line">                        <span class="built_in">SUM</span>(dispatches)</span><br><span class="line">                    <span class="keyword">FROM</span></span><br><span class="line">                        driver_supply</span><br><span class="line">                    <span class="keyword">WHERE</span></span><br><span class="line">                        start_timestamp <span class="operator">&gt;=</span> DATE_SUB(CURDATE(), <span class="type">INTERVAL</span> <span class="number">2</span> WEEK)</span><br><span class="line">                )</span><br><span class="line">            ) <span class="keyword">AS</span> Total</span><br><span class="line">        <span class="keyword">FROM</span></span><br><span class="line">            driver_supply</span><br><span class="line">    ) <span class="keyword">AS</span> c5 <span class="keyword">ON</span> driver.driver_id <span class="operator">=</span> c5.driver_id;</span><br></pre></td></tr></table></figure>
+<p>[ My profile website serves as a prompt for my LinkedIn connections. While not focused on my frontend skillset or SEO tasks, it provides a concise overview of my professional background. Thank you for visiting! ]</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/ai-me.png" height=300 width=300></img>
+                    <p>Raymond Chan</p>
+                    <span>Guided by market-driven, powered by tech-creativity, developed with a human-centric</span>
+                    <dl>
+                        
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">5 <p>Articles</p></a></li>
+                    <li><a href="/categories">11 <p>Categories</p></a></li>
+                    <li><a href="/tags">35 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Importance"><span class="toc-number">2.</span> <span class="toc-text">Importance</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Dump-Data"><span class="toc-number">3.</span> <span class="toc-text">Dump Data</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Dump-Question"><span class="toc-number">4.</span> <span class="toc-text">Dump Question</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Q1"><span class="toc-number">4.1.</span> <span class="toc-text">Q1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q2"><span class="toc-number">4.2.</span> <span class="toc-text">Q2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q3"><span class="toc-number">4.3.</span> <span class="toc-text">Q3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q4"><span class="toc-number">4.4.</span> <span class="toc-text">Q4</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Driver-or-travelling-database-Response"><span class="toc-number">5.</span> <span class="toc-text">Driver or travelling database Response</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer-1"><span class="toc-number">5.1.</span> <span class="toc-text">Answer 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer-2"><span class="toc-number">5.2.</span> <span class="toc-text">Answer 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer-3"><span class="toc-number">5.3.</span> <span class="toc-text">Answer 3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer-4"><span class="toc-number">5.4.</span> <span class="toc-text">Answer 4</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            Raymond Chan
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        </br>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="/js/MathJax.js">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+  <link rel="stylesheet" href="/css/gitalk.min.css">
+  <script type="text/javascript" src="/js/gitalk.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script type="text/javascript" src="/js/typed.min.js">
+</script>
+<script type="text/javascript" src="/js/md5.min.js">
+</script>
+<script type="text/javascript" src="/js/codemirror.min.js">
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/sql/sql.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ <link rel="stylesheet" href="/css/photoswipe.min.css">
+<link rel="stylesheet" href="/css/default-skin.min.css">
+<script type="text/javascript" src="/js/photoswipe.min.js">
+</script>
+<script type="text/javascript" src="/js/photoswipe-ui-default.min.js">
+</script>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Guided by market-driven, powered by tech-creativity, developed with a human-centric', '以行銷為引路，科技創意為工具，為人性而開發发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
