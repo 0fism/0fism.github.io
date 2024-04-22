@@ -1,16 +1,32 @@
 .content table {
-    color:#0B0B2A!important;
+    color: #0B0B2A !important;
 }
 
 .content table a {
-    color:#0D85D9!important;
+    color: #0D85D9 !important;
 }
 
 .content a:hover {
-    color: var(--secondary)!important;
+    color: var(--secondary) !important;
 }
 
 table {
-    background-color: rgba(255, 255, 255, 0.2)!important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
     /* Adjust the RGB values and opacity as needed */
+}
+
+.content>h3 {
+    font-weight: 600;
+}
+
+.content>h4 {
+    font-weight: 600;
+}
+
+.content a {
+    color: #0D85D9;
+}
+
+.article .sidebar .box img {
+    height: auto!important;
 }
