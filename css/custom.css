@@ -32,8 +32,8 @@ table {
 }
 
 .markdown img {
-    border: 1px black solid!important;
-    padding: 5px!important;
+    border: 1px black solid;
+    padding: 5px;
 }
 
         
