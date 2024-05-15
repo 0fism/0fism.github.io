@@ -30,3 +30,10 @@ table {
 .article .sidebar .box img {
     height: auto!important;
 }
+
+.markdown img {
+    border: 1px black solid;
+    padding: 5px;
+}
+
+        

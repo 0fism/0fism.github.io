@@ -5,13 +5,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Foundation of crypto/web3 domain knowledge - Hexo</title>
+    <title>Web3 Blockchain Exploring Solana - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     
     <meta name="description" content="
-[ My profile website serves as a prompt for my LinkedIn connections. While not focused on my front,"> 
+
+
+
+I. IntroductionIn my quest to understand the foundations of blockchain technology, I embarked o,"> 
     <meta name="author" content="Raymond Chan"> 
     
     <link rel="icon" href="/img/favicon.png"> 
@@ -72,7 +75,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="index.html" data-url="https://0fism.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">Foundation of crypto/web3 domain knowledge</h3>
+        <h3 class="subtitle">Web3 Blockchain Exploring Solana</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -105,22 +108,22 @@
                 <a href="/categories/Web3"><b>「
                     </b>WEB3<b> 」</b></a>
                 
-                January 16, 2024
+                May 15, 2024
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2024/01/16/web3-mindmap/" title="Foundation of crypto&#x2F;web3 domain knowledge" class="">Foundation of crypto&#x2F;web3 domain knowledge</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/05/15/web3-blockchain-exploring-solana%20copy/" title="Web3 Blockchain Exploring Solana" class="">Web3 Blockchain Exploring Solana</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    294
+                    7.9k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    7 mins.
                 </span>
                 
                 
@@ -152,7 +155,63 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <p><img src="/img/web3.png" alt="n8n Rss GPT" title="MarineGEO logo"></p>
+            <p><img src="/img/web3.png" alt="Blockchain Mindmap" title="Blockchain Mindmap"></p>
+<p><img src="/img/explorer-solana.jpeg" alt="Solana Explorer - pubkey" title="Solana Explorer"></p>
+<p><img src="/img/program-token.jpeg" alt="Program Token" title="Program Token"></p>
+<p><img src="/img/create-transfer-token.jpeg" alt="Part of Solana Token concept" title="Part of Solana Token concept"></p>
+<h2 id="I-Introduction"><a href="#I-Introduction" class="headerlink" title="I. Introduction"></a>I. Introduction</h2><p>In my quest to understand the foundations of blockchain technology, I embarked on a fascinating exploration of Solana, a high-performance blockchain platform. Through practical experimentation and coding exercises, I gained valuable insights into Solana’s capabilities and functionality. In this blog, I will share my experiences and showcase the code I wrote during this journey.</p>
+<h2 id="II-Account"><a href="#II-Account" class="headerlink" title="II. Account"></a>II. Account</h2><p>My own pubkey: 4ZmQQTx7CKQhoMXUCe4fsA9XoQu621ZCqxwpcU4LMDqq<br>My Token Address or Mint account: 5yL3TobXAXfLVHKVri5DyjFyZ3KkVVHMbmsyN9YE9qoi<br>My Token account: FSdrKzsViFMw3hHtKSQkXoVdyz9CXTmtXkgL7V9UqZ2b</p>
+<p>1 pubkey can have multi token addresses &#x2F;&#x2F;spl-token accounts<br>Recipient pubkey: CZmVK1DymrSVWHiQCGXx6VG5zgHVrh5J1P514jHKRDxA<br>Recipient  token account: Gn5GLUbDZU4ZVSfyPaZrcFJt8s72e3bYAp5Mz8e4fRtv</p>
+<h2 id="III-Used-Functions"><a href="#III-Used-Functions" class="headerlink" title="III. Used Functions"></a>III. Used Functions</h2><p>solana<br>solana-keygen<br>spl-token </p>
+<h2 id="IV-Setting-Up-the-Environment-and-Account"><a href="#IV-Setting-Up-the-Environment-and-Account" class="headerlink" title="IV. Setting Up the Environment and Account"></a>IV. Setting Up the Environment and Account</h2><p>To begin, I set up my development environment to work with Solana. I chose the Solana development network for experimentation. Here are the steps I followed:</p>
+<ol>
+<li><p>Configuring the Solana development network:</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">solana config set --url https:<span class="comment">//api.devnet.solana.com</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Creating an account:</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">solana-keygen <span class="keyword">new</span> <span class="comment">--force</span></span><br></pre></td></tr></table></figure>
+<p><img src="/img/solana-keygen.jpeg"></p>
+</li>
+<li><p>Checking the current address (pubkey) of the account:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">solana-keygen pubkey</span></span><br></pre></td></tr></table></figure>
+<p>return : 4ZmQQTx7CKQhoMXUCe4fsA9XoQu621ZCqxwpcU4LMDqq</p>
+</li>
+<li><p>Acquiring testnet SOL from the faucet:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">solana</span> airdrop <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p><img src="/img/solana-airdrop.png"></p>
+</li>
+<li><p>Checking the account balance:<br>1 SOL &#x3D; 1,000,000,000 lamports;<br>or can use or RPC .getAccountInfo</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">solana balance</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Transfer Solana:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">solana</span> transfer --<span class="literal">allow</span>-unfunded-recipient CZmVK1DymrSVWHiQCGXx6VG5zgHVrh5J1P514jHKRDxA <span class="number">0</span>.<span class="number">01</span></span><br></pre></td></tr></table></figure>
+<p>return : 4vZgZcRsrRDiy8hUEJxFjCGhMqQEdTzsTajrFrPbUitQYWPaeMqjjuB4TrGZJFCbZZbojXBqxazpYxG2Eb9f8m2Y</p>
+</li>
+</ol>
+<h2 id="V-Creating-and-Managing-Tokens"><a href="#V-Creating-and-Managing-Tokens" class="headerlink" title="V. Creating and Managing Tokens"></a>V. Creating and Managing Tokens</h2><p>One of the core features of Solana is its ability to create and manage tokens. Let’s explore the steps involved:</p>
+<ol>
+<li><p>Creating a token:</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spl-<span class="built_in">token</span> <span class="keyword">create</span>-<span class="built_in">token</span></span><br></pre></td></tr></table></figure>
+<p><img src="/img/create-token.jpeg"></p>
+</li>
+<li><p>Creating a token account:</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">spl-token</span> <span class="built_in">create-account</span> <span class="string">5yL3TobXAXfLVHKVri5DyjFyZ3KkVVHMbmsyN9YE9qoi</span></span><br></pre></td></tr></table></figure>
+<p><img src="/img/create-account.jpeg"></p>
+</li>
+<li><p>Minting tokens &#x3D; produce how many tokens&#x2F;coins:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">spl</span>-token mint <span class="number">5</span>yL3TobXAXfLVHKVri5DyjFyZ3KkVVHMbmsyN9YE9qoi <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<p><img src="/img/mining-tokens.jpeg"></p>
+</li>
+<li><p>Checking the token balance:</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spl-<span class="built_in">token</span> <span class="built_in">balance</span> <span class="number">5</span>yL3TobXAXfLVHKVri5DyjFyZ3KkVVHMbmsyN9YE9qoi</span><br></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spl-<span class="built_in">token</span> <span class="built_in">balance</span> --address FSdrKzsViFMw3hHtKSQkXoVdyz9CXTmtXkgL7V9UqZ2b</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Transferring tokens (show the owner of the token):</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">spl</span>-token transfer --fund-recipient <span class="number">5</span>yL3TobXAXfLVHKVri5DyjFyZ3KkVVHMbmsyN9YE9qoi <span class="number">1</span> CZmVK1DymrSVWHiQCGXx6VG5zgHVrh5J1P514jHKRDxA --<span class="literal">allow</span>-unfunded-recipient</span><br></pre></td></tr></table></figure>
+<p><img src="/img/token-transfer.jpeg"></p>
+</li>
+<li><p>Wrapping:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">spl</span>-token balance --address Aoga1iQcdiwd9LPL33HrZBwKPc3T9YYDHckDZbdKtNgC <span class="number">0</span>.<span class="number">89796072</span></span><br></pre></td></tr></table></figure></li>
+</ol>
 <p>[ My profile website serves as a prompt for my LinkedIn connections. While not focused on my frontend skillset or SEO tasks, it provides a concise overview of my professional background. Thank you for visiting! ]</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
@@ -210,6 +269,13 @@
             </div>
             
             
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-Introduction"><span class="toc-number">1.</span> <span class="toc-text">I. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#II-Account"><span class="toc-number">2.</span> <span class="toc-text">II. Account</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#III-Used-Functions"><span class="toc-number">3.</span> <span class="toc-text">III. Used Functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IV-Setting-Up-the-Environment-and-Account"><span class="toc-number">4.</span> <span class="toc-text">IV. Setting Up the Environment and Account</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V-Creating-and-Managing-Tokens"><span class="toc-number">5.</span> <span class="toc-text">V. Creating and Managing Tokens</span></a></li></ol>
+                </div>
+            </div>
             
             
         </div>
