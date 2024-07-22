@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Docker Use Case - Using Airflow - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    
+    <meta name="description" content="Use Case IntroAs a digital marketer with experience in both data analysis and SEO, I found the expl,"> 
+    <meta name="author" content="Raymond Chan"> 
+    
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    <link rel="stylesheet" href="/css/animate.min.css">
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    <link rel="stylesheet" href="/css/codemirror.min.css">
+    <link rel="stylesheet" href="/css/dracula.css">
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="index.html" data-url="https://0fism.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Docker Use Case - Using Airflow</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/Docker"><b>「
+                    </b>DOCKER<b> 」</b></a>
+                
+                July 21, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/07/21/docker-use-case-airflow/" title="Docker Use Case - Using Airflow" class="">Docker Use Case - Using Airflow</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    5.6k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    5 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Airflow/" rel="tag">Airflow</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Bash/" rel="tag">Bash</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Linux-command/" rel="tag">Linux command</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Logging/" rel="tag">Logging</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h2 id="Use-Case-Intro"><a href="#Use-Case-Intro" class="headerlink" title="Use Case Intro"></a>Use Case Intro</h2><p>As a <code>digital marketer</code> with experience in both data analysis and SEO, I found the exploration of Docker and Airflow incredibly valuable for <code>automating workflows</code> and optimizing business processes in our fast-paced industry. These tools can be applied to data ETL and SEO campaign management, saving time and freeing up bandwidth to focus on higher-level strategy and creativity.</p>
+<p>As our reliance on various AI tools grows, learning to leverage powerful automation tools like Docker becomes increasingly crucial. We’ll explore how to use Docker to automate a workflow,using Airflow as a prime example. Airflow is a robust workflow engine that can help us execute tasks on a regular schedule, such as running <code>web scraping</code> scripts.</p>
+<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><ul>
+<li>Docker installed on your machine</li>
+<li>Basic understanding of Linux commands</li>
+<li>Basic understanding of Python</li>
+<li>Basic understanding of logging</li>
+</ul>
+<h2 id="Getting-Started-with-Airflow-and-Docker"><a href="#Getting-Started-with-Airflow-and-Docker" class="headerlink" title="Getting Started with Airflow and Docker"></a>Getting Started with Airflow and Docker</h2><p>First, we’ll need to install Airflow in the Docker environment. We can do this by running the following commands:</p>
+<blockquote>
+
+
+<ul>
+<li><strong>Get the YAML file &gt; mkdir 3 folders &gt; create a environment file &gt; run docker-compose</strong> <a href="%5D"></a></blockquote></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -Lf0 <span class="string">&quot;https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml&quot;</span></span><br><span class="line"><span class="built_in">mkdir</span> ./dags ./plugins ./logs</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;AIRFLOW_UID=<span class="subst">$(id -u)</span>\nAIRFLOW_GID=0&quot;</span> &gt; .<span class="built_in">env</span></span><br><span class="line">docker-compose up airflow-init</span><br><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p>These commands will create an Airflow Docker environment and initialize the necessary directories and configuration files. This setup can be easily deployed on a local machine or on a cloud platform like AWS.<br><img src="/img/airflow01.png"></p>
+<h3 id="Python-scripts"><a href="#Python-scripts" class="headerlink" title="Python scripts"></a>Python scripts</h3><p>To ensure that the Python scripts developed locally can run properly in the Airflow Docker environment, we need to make a few adjustments. First, we should run the scripts in a virtual environment (source venv&#x2F;bin&#x2F;activate) and then add some Airflow-specific argument modules, such as start time and retry delay configuration, to the original script.<br><img src="/img/airflow02.png"><br><img src="/img/airflow03.png"></p>
+<h3 id="File-Transfer-Command"><a href="#File-Transfer-Command" class="headerlink" title="File Transfer Command"></a>File Transfer Command</h3><p>Once we’ve made these modifications, we can use the following commands to transfer the local File Transfer Command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> /Users/pixarlr/Downloads/airFlowVenv/sample.py 3e7dd18351c5:/opt/airflow/dags</span><br><span class="line">docker <span class="built_in">cp</span> /Users/pixarlr/Downloads/airFlowVenv/sample.py airflow-docker-</span><br><span class="line">airflow-webserver-1:/opt/airflow/dags</span><br></pre></td></tr></table></figure>
+
+<h3 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h3><p>To check the status of the imported files,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it airflow-docker-airflow-webserver-1 airflow dags list</span><br><span class="line">docker <span class="built_in">exec</span> -it airflow-docker-airflow-webserver-1 airflow dags list-import-errors</span><br></pre></td></tr></table></figure>
+<p>If any issues arise, we can use the following command for deeper debugging.</p>
+<h3 id="Key-advantages"><a href="#Key-advantages" class="headerlink" title="Key advantages"></a>Key advantages</h3><p>Compared to Cron Tab, Airflow offers several key advantages:</p>
+<ol>
+<li>Retry Configuration: Airflow can automatically retry failed tasks,which is incredibly useful when problems occur during task execution.</li>
+<li>Visibility and Reporting: Airflow provides a clear status view, allowing<br>you to see the runtime, duration, and other relevant information for<br>each task.</li>
+<li>Logging: Airflow logs each task execution, making it easy to debug and troubleshoot any issues that may arise.<br><img src="/img/airflow04.png"></li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/ai-me.png" height=300 width=300></img>
+                    <p>Raymond Chan</p>
+                    <span>Guided by market-driven, powered by tech-creativity, developed with a human-centric</span>
+                    <dl>
+                        
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">10 <p>Articles</p></a></li>
+                    <li><a href="/categories">10 <p>Categories</p></a></li>
+                    <li><a href="/tags">51 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-Case-Intro"><span class="toc-number">1.</span> <span class="toc-text">Use Case Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-number">2.</span> <span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-Started-with-Airflow-and-Docker"><span class="toc-number">3.</span> <span class="toc-text">Getting Started with Airflow and Docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commands"><span class="toc-number">4.</span> <span class="toc-text">Commands</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-scripts"><span class="toc-number">4.1.</span> <span class="toc-text">Python scripts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File-Transfer-Command"><span class="toc-number">4.2.</span> <span class="toc-text">File Transfer Command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Check-Status"><span class="toc-number">4.3.</span> <span class="toc-text">Check Status</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Key-advantages"><span class="toc-number">4.4.</span> <span class="toc-text">Key advantages</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            Raymond Chan
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        </br>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="/js/MathJax.js">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+  <link rel="stylesheet" href="/css/gitalk.min.css">
+  <script type="text/javascript" src="/js/gitalk.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script type="text/javascript" src="/js/typed.min.js">
+</script>
+<script type="text/javascript" src="/js/md5.min.js">
+</script>
+<script type="text/javascript" src="/js/codemirror.min.js">
+</script>
+
+<!-- Default Statcounter code for 0fism https://0fism.github.io/ -->
+<script type="text/javascript">
+  var sc_project = 12957380;
+  var sc_invisible = 1;
+  var sc_security = "ae6bae82"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="free web stats" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12957380/0/ae6bae82/1/" alt="free web stats" referrerPolicy="no-referrer-when-downgrade"></a></div>
+</noscript>
+<!-- End of Statcounter Code -->
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/sql/sql.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ <link rel="stylesheet" href="/css/photoswipe.min.css">
+<link rel="stylesheet" href="/css/default-skin.min.css">
+<script type="text/javascript" src="/js/photoswipe.min.js">
+</script>
+<script type="text/javascript" src="/js/photoswipe-ui-default.min.js">
+</script>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Guided by market-driven, powered by tech-creativity, developed with a human-centric', '以行銷為引路，科技創意為工具，為人性而開發发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>

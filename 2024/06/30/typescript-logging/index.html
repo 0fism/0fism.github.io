@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Logging from scratch by Typescript - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    
+    <meta name="description" content="Suffered Marketing SituationIn my previous career, I deeply understood the importance of good loggi,"> 
+    <meta name="author" content="Raymond Chan"> 
+    
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    <link rel="stylesheet" href="/css/animate.min.css">
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    <link rel="stylesheet" href="/css/codemirror.min.css">
+    <link rel="stylesheet" href="/css/dracula.css">
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="index.html" data-url="https://0fism.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Logging from scratch by Typescript</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/Web3"><b>「
+                    </b>WEB3<b> 」</b></a>
+                
+                June 30, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/06/30/typescript-logging/" title="Logging from scratch by Typescript" class="">Logging from scratch by Typescript</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    5.6k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    5 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="Suffered-Marketing-Situation"><a href="#Suffered-Marketing-Situation" class="headerlink" title="Suffered Marketing Situation"></a>Suffered Marketing Situation</h1><p>In my previous career, I deeply understood the importance of good logging and analysis skills for improving work efficiency and solving problems. I believe that it would enable me to provide more <code>valuable communication</code> to the technical team and facilitate <code>cross-departmental problem-solving</code>. By learning logging skills, it would be very helpful for me in the future when facing various unexpected situations in problem diagnosis, resolution, and marketing work (Website server, Website traffic, Google SEO logic etc). This would allow me to identify and diagnose customer issues more quickly and provide better customer service.</p>
+<h2 id="Well-designed-Class-Structure"><a href="#Well-designed-Class-Structure" class="headerlink" title="Well-designed Class Structure"></a>Well-designed Class Structure</h2><p>I have <code>designed class structures</code> with care in the past. My code included a Logger class and its subclasses ConsoleLogger and DevLogger. This abstract class design pattern can effectively support the extensibility and maintainability of the code. Each subclass implemented its own logMessage() and getLogInfo() methods, which allowed me to easily add new loggers without modifying existing code. Furthermore, I defined the LoggerLevel enum type in loggerClass.ts, providing a clear log level definition and making the code more explicit and understandable.</p>
+<h2 id="Logging-Functionality"><a href="#Logging-Functionality" class="headerlink" title="Logging Functionality"></a>Logging Functionality</h2><p>In my fileSystem.ts file, I included two functions: consoleLoggerFile() for logging error logs and devLoggerFile() for logging development logs. These functions used the ConsoleLogger and DevLogger classes to generate log messages and log information, and then wrote them to the LOG.txt file. This separation of logging entities and log writing functionality makes the code more modular and testable. It’s worth noting that in the writeToFile() function, I used fs.promises.appendFile() to asynchronously write log information to the file, and implemented an <code>error handling</code> mechanism to ensure that the program execution would not be interrupted even if an error occurred during the writing process.</p>
+<h2 id="Flexible-Command-line-Tool"><a href="#Flexible-Command-line-Tool" class="headerlink" title="Flexible Command-line Tool"></a>Flexible Command-line Tool</h2><p>To improve the flexibility and usability of the code, I also implemented a simple command-line tool in the log.ts file, which allows users to specify log levels and messages, and log them to the log file. Additionally, I developed the terminalAduit() function, which can execute arbitrary commands entered by the user and log the output to the console and log file. These features are very useful during development, testing, and even in production environments, as they help better understand the system’s behavior. I also used <code>process.argv</code> to parse command-line arguments, which makes the code more generic and configurable.</p>
+<h2 id="1-Compiling-TypeScript-Files"><a href="#1-Compiling-TypeScript-Files" class="headerlink" title="1. Compiling TypeScript Files"></a>1. Compiling TypeScript Files</h2><h2 id="Use-the-command"><a href="#Use-the-command" class="headerlink" title="Use the command"></a>Use the command</h2><blockquote>
+<p>tsc fileSystem.ts log.ts logger.ts loggerClass.ts </p>
+</blockquote>
+<ul>
+<li>To compile the 4 TypeScript files into JavaScript files.</li>
+</ul>
+<h2 id="2-Logging-Message"><a href="#2-Logging-Message" class="headerlink" title="2. Logging Message"></a>2. Logging Message</h2><h2 id="There-are-two-ways-to-record-log-messages"><a href="#There-are-two-ways-to-record-log-messages" class="headerlink" title="There are two ways to record log messages:"></a>There are two ways to record log messages:</h2><h3 id="2-1-Automatic-logging"><a href="#2-1-Automatic-logging" class="headerlink" title="2.1 Automatic logging:"></a>2.1 Automatic logging:</h3><blockquote>
+<p>Run the node logger.js </p>
+</blockquote>
+<ul>
+<li>the script will listen to the terminal input and You may INSERT the terminal command like normal way.<br><img src="/img/logging01.png"></li>
+<li>automatically record the error messages to the LOG.txt file.<br><img src="/img/logging02.png"></li>
+</ul>
+<h3 id="2-2-Manual-logging"><a href="#2-2-Manual-logging" class="headerlink" title="2.2 Manual logging:"></a>2.2 Manual logging:</h3><ul>
+<li>Run the sample <blockquote>
+<p>node log.js 1 Here is the log message i want to mark.<br><img src="/img/logging03.png"></p>
+</blockquote>
+</li>
+<li><strong>P.S. In mid-July, I got new ideas that this part can be accomplished more effectively by using an exception denoted as ‘e’. I would like to update the implementation later.</strong></li>
+<li>The command recods manually the log message to the LOG.txt file.</li>
+<li>Params[2] is a number type. Please refer to the log message levels.</li>
+</ul>
+<h2 id="3-Log-message-levels"><a href="#3-Log-message-levels" class="headerlink" title="3 Log message levels:"></a>3 Log message levels:</h2><blockquote>
+<p>Verbose &#x3D; 1<br>Info &#x3D; 2<br>Warning &#x3D; 3<br>Error &#x3D; 4</p>
+</blockquote>
+<blockquote>
+
+<p><strong>File:</strong> <a target="_blank" rel="noopener" href="https://github.com/0fism/logger/blob/main/readme.md">GitHub Repo</a></p>
+</blockquote>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/ai-me.png" height=300 width=300></img>
+                    <p>Raymond Chan</p>
+                    <span>Guided by market-driven, powered by tech-creativity, developed with a human-centric</span>
+                    <dl>
+                        
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">10 <p>Articles</p></a></li>
+                    <li><a href="/categories">10 <p>Categories</p></a></li>
+                    <li><a href="/tags">51 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Suffered-Marketing-Situation"><span class="toc-number">1.</span> <span class="toc-text">Suffered Marketing Situation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Well-designed-Class-Structure"><span class="toc-number">1.1.</span> <span class="toc-text">Well-designed Class Structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logging-Functionality"><span class="toc-number">1.2.</span> <span class="toc-text">Logging Functionality</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flexible-Command-line-Tool"><span class="toc-number">1.3.</span> <span class="toc-text">Flexible Command-line Tool</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Compiling-TypeScript-Files"><span class="toc-number">1.4.</span> <span class="toc-text">1. Compiling TypeScript Files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-the-command"><span class="toc-number">1.5.</span> <span class="toc-text">Use the command</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Logging-Message"><span class="toc-number">1.6.</span> <span class="toc-text">2. Logging Message</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#There-are-two-ways-to-record-log-messages"><span class="toc-number">1.7.</span> <span class="toc-text">There are two ways to record log messages:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Automatic-logging"><span class="toc-number">1.7.1.</span> <span class="toc-text">2.1 Automatic logging:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Manual-logging"><span class="toc-number">1.7.2.</span> <span class="toc-text">2.2 Manual logging:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Log-message-levels"><span class="toc-number">1.8.</span> <span class="toc-text">3 Log message levels:</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            Raymond Chan
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        </br>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="/js/MathJax.js">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+  <link rel="stylesheet" href="/css/gitalk.min.css">
+  <script type="text/javascript" src="/js/gitalk.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script type="text/javascript" src="/js/typed.min.js">
+</script>
+<script type="text/javascript" src="/js/md5.min.js">
+</script>
+<script type="text/javascript" src="/js/codemirror.min.js">
+</script>
+
+<!-- Default Statcounter code for 0fism https://0fism.github.io/ -->
+<script type="text/javascript">
+  var sc_project = 12957380;
+  var sc_invisible = 1;
+  var sc_security = "ae6bae82"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="free web stats" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12957380/0/ae6bae82/1/" alt="free web stats" referrerPolicy="no-referrer-when-downgrade"></a></div>
+</noscript>
+<!-- End of Statcounter Code -->
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/sql/sql.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ <link rel="stylesheet" href="/css/photoswipe.min.css">
+<link rel="stylesheet" href="/css/default-skin.min.css">
+<script type="text/javascript" src="/js/photoswipe.min.js">
+</script>
+<script type="text/javascript" src="/js/photoswipe-ui-default.min.js">
+</script>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Guided by market-driven, powered by tech-creativity, developed with a human-centric', '以行銷為引路，科技創意為工具，為人性而開發发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
