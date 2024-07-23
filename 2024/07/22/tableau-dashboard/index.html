@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Data Analysis x Tableau Dashboard - Raymond Chan</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    
+    <meta name="description" content="Case Study IntroWe keep going to carry out business research on Amazon’s facing greater expense and,"> 
+    <meta name="author" content="Raymond Chan"> 
+    
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    <link rel="stylesheet" href="/css/animate.min.css">
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    <link rel="stylesheet" href="/css/codemirror.min.css">
+    <link rel="stylesheet" href="/css/dracula.css">
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Raymond Chan</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="index.html" data-url="https://0fism.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Data Analysis x Tableau Dashboard</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.45), #100e17),
+                url('/img/tableau-background.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/Tableau"><b>「
+                    </b>TABLEAU<b> 」</b></a>
+                
+                July 22, 2024
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/07/22/tableau-dashboard/" title="Data Analysis x Tableau Dashboard" class="">Data Analysis x Tableau Dashboard</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    5k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    5 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Data-Analysis/" rel="tag">Data Analysis</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h2 id="Case-Study-Intro"><a href="#Case-Study-Intro" class="headerlink" title="Case Study Intro"></a>Case Study Intro</h2><p>We keep going to carry out <code>business research</code> on Amazon’s facing greater expense and lower profit of handling return goods issues.The dumy <code>data set</code> comes from Amazon’s different branches which contained the period of 2018 to 2021 sales transactions and customer records. In accordance with the privacy policy and <code>GDPR</code> regulation, some fields were removed under the cleansing process. </p>
+<h2 id="Data-Pre-processing"><a href="#Data-Pre-processing" class="headerlink" title="Data Pre-processing"></a>Data Pre-processing</h2><p><img src="/img/tableau01.png"></p>
+<p><img src="/img/tableau02.png"></p>
+<h2 id="Data-analysis-and-visualization"><a href="#Data-analysis-and-visualization" class="headerlink" title="Data analysis and visualization"></a>Data analysis and visualization</h2><h3 id="Dual-combination"><a href="#Dual-combination" class="headerlink" title="Dual combination"></a>Dual combination</h3><p>The chart is combined the line chart and bar chart to display the correlation and trend of measure of Profit and sale quantity number from 2018 to 2021. The chart showed a trend of decreasing profit and quantity sales from Q1 2018 to Q1 2021.<br><img src="/img/tableau03.png"></p>
+<h3 id="Packed-Bubbles"><a href="#Packed-Bubbles" class="headerlink" title="Packed Bubbles"></a>Packed Bubbles</h3><p>Grouping the insight from visualization 1 and internal reports from the region manager, we are going to drill the question on the higher return rate. Plus, we must exclude the most profitable countries if these countries have good sales result in KPI. According to the graph, the majority of profitable countries are United Stated (23.5%), China (9.5%) and the third is France (7.8%). Other countries with profit margins greater than 5% are also included in the same group. They are United Kingdom, Germany, Australia, and Mexico. Our research should be focused on “Include other” countries that represent less profitable countries.<br><img src="/img/tableau04.png"></p>
+<h3 id="OpenStreetMap"><a href="#OpenStreetMap" class="headerlink" title="OpenStreetMap"></a>OpenStreetMap</h3><p>The darker red color indicated the higher return rate count by the total purchase order. The charts showed the highest number of return goods are in Australia(14.2%), Mexico(13.7%), and China (9%). Combine with Packed Bubbles, these countries provided an insight, the higher quantity of return goods still performance a good result in profit KPI in the overall country population.<br><img src="/img/tableau05.png"></p>
+<h3 id="Horizontal-Bars"><a href="#Horizontal-Bars" class="headerlink" title="Horizontal Bars"></a>Horizontal Bars</h3><p>Define the low-profit counties with a high amount of returned goods order using the horizontal bar chart. The blue represented the positive total profit balance, whereas the orange colors showed the negative profit balance. The chart displayed the majority of issue countries which simultaneously fit the result of Chart 3 and Chart 4. If the business continues to do in this way, Turkey (-32.5%) and Nigeria (-24.6%) continue to sell items with a lower profit margin, they keep losing up to 25–30% which may result in an ongoing financial problem.<br><img src="/img/tableau06.png"></p>
+<h3 id="Stacked-Bars"><a href="#Stacked-Bars" class="headerlink" title="Stacked Bars"></a>Stacked Bars</h3><p>Specific research on Turkey (orange in color) and Nigeria (blue in color), sub-categories are divided into two dimensions through the stacked bards. One is standard order without returns, and the other is with returns. To a larger extent, with returned rate is much less profit than without returned goods. Phones suffered the greatest loss in the sub-Category in the same period, followed by machines and copiers.<br><img src="/img/tableau07.png"></p>
+<h3 id="Treemaps"><a href="#Treemaps" class="headerlink" title="Treemaps"></a>Treemaps</h3><p>The treemaps are shown the nested rectangles of which returned goods reasons is the most impact in two countries. The top 3 least profit sub-categories were researched on their returned reasons. The three reasons of “different from what was ordered” and “unwanted item” and “defective” are similar in scale which is over 25%. They occupied over 50% of all returned reasons.<br><img src="/img/tableau08.png"></p>
+<h2 id="Dashboard-1"><a href="#Dashboard-1" class="headerlink" title="Dashboard 1"></a>Dashboard 1</h2><p><img src="/img/tableau09.png"></p>
+<h2 id="Dashboard-2"><a href="#Dashboard-2" class="headerlink" title="Dashboard 2"></a>Dashboard 2</h2><p><img src="/img/tableau10.png"><br>Afterward, it was found that there is a significant profit difference between situations with and without returned goods. And the profit was dropping is a fact. Amazon should begin to focus on the problem happened in a few nations, particularly Nigeria and Turkey.</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/ai-me.png" height=300 width=300></img>
+                    <p>Raymond Chan</p>
+                    <span>Guided by market-driven, powered by tech-creativity, developed with a human-centric</span>
+                    <dl>
+                        
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">12 <p>Articles</p></a></li>
+                    <li><a href="/categories">12 <p>Categories</p></a></li>
+                    <li><a href="/tags">57 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Case-Study-Intro"><span class="toc-number">1.</span> <span class="toc-text">Case Study Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Pre-processing"><span class="toc-number">2.</span> <span class="toc-text">Data Pre-processing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-analysis-and-visualization"><span class="toc-number">3.</span> <span class="toc-text">Data analysis and visualization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dual-combination"><span class="toc-number">3.1.</span> <span class="toc-text">Dual combination</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Packed-Bubbles"><span class="toc-number">3.2.</span> <span class="toc-text">Packed Bubbles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenStreetMap"><span class="toc-number">3.3.</span> <span class="toc-text">OpenStreetMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Horizontal-Bars"><span class="toc-number">3.4.</span> <span class="toc-text">Horizontal Bars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stacked-Bars"><span class="toc-number">3.5.</span> <span class="toc-text">Stacked Bars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Treemaps"><span class="toc-number">3.6.</span> <span class="toc-text">Treemaps</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dashboard-1"><span class="toc-number">4.</span> <span class="toc-text">Dashboard 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dashboard-2"><span class="toc-number">5.</span> <span class="toc-text">Dashboard 2</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2024
+        <span class="gradient-text">
+            Raymond Chan
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.4" target="_blank" rel="noopener">v1.4.9.4</a></small>
+        
+        </br>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="/js/MathJax.js">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+  <link rel="stylesheet" href="/css/gitalk.min.css">
+  <script type="text/javascript" src="/js/gitalk.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script type="text/javascript" src="/js/typed.min.js">
+</script>
+<script type="text/javascript" src="/js/md5.min.js">
+</script>
+<script type="text/javascript" src="/js/codemirror.min.js">
+</script>
+
+<!-- Default Statcounter code for 0fism https://0fism.github.io/ -->
+<script type="text/javascript">
+  var sc_project = 12957380;
+  var sc_invisible = 1;
+  var sc_security = "ae6bae82"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="free web stats" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12957380/0/ae6bae82/1/" alt="free web stats" referrerPolicy="no-referrer-when-downgrade"></a></div>
+</noscript>
+<!-- End of Statcounter Code -->
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/sql/sql.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ <link rel="stylesheet" href="/css/photoswipe.min.css">
+<link rel="stylesheet" href="/css/default-skin.min.css">
+<script type="text/javascript" src="/js/photoswipe.min.js">
+</script>
+<script type="text/javascript" src="/js/photoswipe-ui-default.min.js">
+</script>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Guided by market-driven, powered by tech-creativity, developed with a human-centric', '以行銷為引路，科技創意為工具，為人性而開發～'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
